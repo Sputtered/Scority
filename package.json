@@ -1,0 +1,39 @@
+{
+  "name": "replay-proxy",
+  "version": "0.1.0",
+  "description": "Discord replay queue, Minecraft recorder, and player statistics",
+  "type": "module",
+  "main": "proxy.js",
+  "scripts": {
+    "auth:account": "node --env-file-if-exists=.env scripts/auth-account.js",
+    "web": "node --env-file-if-exists=.env --env-file-if-exists=.env.web scripts/admin-web.js",
+    "start": "node --env-file-if-exists=.env app.js",
+    "test": "node --import ./test/setup-owner.js --test test/*.test.js",
+    "test:capture": "node --test test/packet-capture.test.js test/capture-analysis.test.js",
+    "capture:replay": "node scripts/capture-replay.js",
+    "analyze:capture": "node scripts/analyze-capture.js",
+    "estimate:protection": "node scripts/estimate-protection.js",
+    "score:capture": "node scripts/score-capture.js",
+    "preview:scored": "node scripts/preview-scored.js",
+    "proxy": "node --env-file-if-exists=.env proxy.js",
+    "register": "node --env-file-if-exists=.env scripts/register-commands.js",
+    "import": "node --env-file-if-exists=.env scripts/import-replays.js",
+    "preview:cards": "node scripts/preview-cards.js",
+    "trial:damage": "node scripts/damage-trial.js"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.8",
+    "discord.js": "^14.27.0",
+    "minecraft-data": "^3.113.2",
+    "minecraft-protocol": "^1.51.0",
+    "prismarine-auth": "^3.1.1",
+    "prismarine-chunk": "^1.41.0",
+    "vec3": "^0.1.10"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "overrides": {
+    "uuid": "11.1.1"
+  }
+}

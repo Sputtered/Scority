@@ -1,0 +1,10 @@
+node_modules/
+.env
+.env.*
+!.env.example
+mc-auth-cache/
+captures/
+data/
+output/
+
+.work/
