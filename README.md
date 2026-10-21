@@ -1,6 +1,6 @@
 # Scority
 
-> **Note:** This README was written by AI.
+> **Note:** I used AI to write most of docs and README.
 
 A Discord app for submitting Hypixel Bed Wars replays, recording them with a
 managed Minecraft 1.8.9 connection, and exploring player stats. Results, queue
